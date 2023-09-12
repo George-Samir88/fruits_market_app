@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/general_button.dart';
+import 'package:fruits_market/features/on_boarding/presentation/widgets/custom_page_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -9,6 +10,7 @@ class OnBoardingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        const CustomPageView(),
         Positioned(
           top: SizeConfig.screenDefaultSize! * 10,
           right: 32,

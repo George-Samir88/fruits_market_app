@@ -18,11 +18,11 @@ class PageViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const VerticalSpace(20.0),
+        const VerticalSpace(25.0),
         SizedBox(
             height: SizeConfig.screenDefaultSize! * 17,
             child: Image.asset(image)),
-        const VerticalSpace(5.0),
+        const VerticalSpace(3),
         Text(
           title,
           style: const TextStyle(
@@ -32,10 +32,11 @@ class PageViewItem extends StatelessWidget {
           ),
           textAlign: TextAlign.left,
         ),
-        const VerticalSpace(2.5),
+        const VerticalSpace(1.5),
         Text(
           subTitle,
           style: const TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 15.0,
             color: Color(0xff78787c),
           ),

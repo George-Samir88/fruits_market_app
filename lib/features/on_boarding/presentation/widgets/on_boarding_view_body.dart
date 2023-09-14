@@ -62,6 +62,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             text: hasClientsChecker()
                 ? (pageController.page == 2 ? 'Get Started' : 'Next')
                 : 'Next',
+            onTap: () {
+              pageController.nextPage(
+                duration: const Duration(milliseconds: 600),
+                curve: Curves.easeIn,
+              );
+            },
           ),
         ),
       ],

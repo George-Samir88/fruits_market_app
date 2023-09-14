@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/general_button.dart';
-import 'package:fruits_market/features/auth/presentation/login_view.dart';
+import 'package:fruits_market/features/auth/presentation/pages/login/login_view.dart';
 import 'package:fruits_market/features/on_boarding/presentation/widgets/custom_dots_indicator.dart';
 import 'package:fruits_market/features/on_boarding/presentation/widgets/custom_page_view.dart';
 import 'package:get/get.dart';

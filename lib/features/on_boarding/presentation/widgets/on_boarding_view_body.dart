@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/general_button.dart';
+import 'package:fruits_market/features/auth/presentation/login_view.dart';
 import 'package:fruits_market/features/on_boarding/presentation/widgets/custom_dots_indicator.dart';
 import 'package:fruits_market/features/on_boarding/presentation/widgets/custom_page_view.dart';
+import 'package:get/get.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -63,10 +65,18 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 ? (pageController.page == 2 ? 'Get Started' : 'Next')
                 : 'Next',
             onTap: () {
-              pageController.nextPage(
-                duration: const Duration(milliseconds: 600),
-                curve: Curves.easeIn,
-              );
+              if (pageController.page == 2) {
+                Get.to(
+                  const LoginView(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 600),
+                );
+              } else {
+                pageController.nextPage(
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.easeIn,
+                );
+              }
             },
           ),
         ),

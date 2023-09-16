@@ -4,6 +4,8 @@ import 'package:fruits_market/constants.dart';
 import 'package:fruits_market/core/utils/custom_sized_box.dart';
 import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/general_button.dart';
+import 'package:fruits_market/features/auth/presentation/pages/complete_information/complete_info_view.dart';
+import 'package:get/get.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -49,7 +51,13 @@ class LoginViewBody extends StatelessWidget {
                   color: const Color(0xff426782),
                   text: 'Login with',
                   iconData: FontAwesomeIcons.facebookF,
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(
+                      const CompleteInfoView(),
+                      duration: const Duration(milliseconds: 500),
+                      transition: Transition.rightToLeft,
+                    );
+                  },
                 ),
               ),
             ),

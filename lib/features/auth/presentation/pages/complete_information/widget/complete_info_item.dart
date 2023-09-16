@@ -5,18 +5,16 @@ import '../../../../../../core/widgets/custom_text_field.dart';
 
 class CompleteInfoItem extends StatelessWidget {
   const CompleteInfoItem(
-      {super.key,
-      required this.text,
-      required this.maxLines,
-      required this.inputType});
+      {super.key, required this.text, this.maxLines, this.inputType});
 
   final String text;
-  final int maxLines;
-  final TextInputType inputType;
+  final int? maxLines;
+  final TextInputType? inputType;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           text,
